@@ -33,7 +33,7 @@ public class SelenideFormTest {
         $("[data-test-id='phone'] input").setValue("+79179778855");
         $("[data-test-id='agreement']").click();
         $(".button").click();
-        $(withText("Успешно!")).shouldBe(visible, Duration.ofSeconds(13));
+        $(withText("Успешно!")).shouldBe(visible, Duration.ofSeconds(11));
         $("[data-test-id='notification'] .notification__content").shouldHave(exactText("Встреча успешно забронирована на " + formatter.format(nextDate)));
     }
 }
